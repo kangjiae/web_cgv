@@ -1,0 +1,879 @@
+/*  폰트 적용 */
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+html {
+    font-family: "Noto Sans KR", sans-serif;
+    background-color:#fefcef;
+}
+
+/* 노말라이즈 */
+html, body, ul, li {
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+
+a {
+    color:inherit;
+    text-decoration:none;
+}
+
+/* 라이브러리 */
+.con {
+    margin:0 auto;
+}
+
+.img-box > img {
+    width:100%;
+    display:block;
+}
+
+.row::after {
+    content:"";
+    display:block;
+    clear:both;
+}
+
+.cell {
+    float:left;
+    box-sizing:border-box;
+}
+
+.cell-right {
+    float:right;
+    box-sizing:border-box;
+}
+
+.block {
+    display:block;
+}
+
+.inline-block {
+    display:inline-block;
+}
+
+.text-align-center {
+    text-align:center;
+}
+
+.line-height-0-ch-only {
+    line-height:0;
+}
+
+.line-height-0-ch-only > * {
+    line-height:normal;
+}
+
+.relative {
+    position:relative;
+}
+
+.absolute-left {
+    position:absolute;
+    left:0;
+}
+
+.absolute-top-left-right-0 {
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+}
+
+.absolute-right {
+    position:absolute;
+    right:0;
+}
+
+.absolute-middle {
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+}
+
+/* 커스텀 */
+.con {
+    width:980px;
+}
+
+.con-min-width {
+    min-width:980px;
+}
+
+@media ( min-width:980px ) {
+    html, body {
+        overflow-x:hidden;
+        overflow-y:hidden;
+    }
+}
+
+html {
+    overflow-y:scroll;
+}
+
+img {
+    vertical-align:middle;
+    
+}
+
+/* 탑바 */
+.event-bar_1 .slider-1 {
+    position:relative;
+    height:80px;
+}
+.event-bar_1 {
+    background-color:#ebf3f5;
+    color:black;
+    text-align:center;
+}
+.event-bar_1 .btn_ad_close img {
+    vertical-align: middle;
+    cursor: pointer;
+}
+.btn_ad_close {
+    position: absolute;
+    top: 12px;
+    cursor: pointer;
+}
+
+.top-bar-wrap {
+    background-image:url(img/bg_header.gif);
+    background-repeat: repeat no-repeat;
+}
+.top-bar .brown{
+    color:#d67025;
+    font-weight:bold;
+}
+.top-bar .gray {
+    color:#666666;
+}
+.top-bar .orange {
+    color:#ff7610;
+}
+.top-bar nav > ul > li {
+    padding-top:5px;
+    height:30px;
+    font-size:12px;
+}
+.top-bar .menu-1 a {
+    display:block;
+    padding:0 7px;
+    font-size:12px;
+    font-weight:300%;
+    line-height:1.2;
+}
+.top-bar .menu-2 a  {
+    padding:0 6px;
+    display:block;
+}
+.top-bar .menu-1 > ul > .cell  {
+    border-right:1px solid #ddd;  
+}
+.top-bar .menu-1 > ul > .cell-apps {
+    border-left:1px solid #ddd;
+}
+.top-bar .menu-1 ul li .img-box {
+    width:18px;
+    height:18px;
+    margin-left:10px; 
+}
+.top-bar .menu-1 ul ul::before{
+    content:"";
+    display:block;
+    position:absolute;
+    top:-15px;
+    height:15px;
+    width:100%;
+    left:0;
+}
+.top-bar .menu-1 > ul .cell-apps::after {
+    content:"";
+    position:absolute;
+    width:21px;
+    height:15px;
+    background-image:url(img/bg_layerpop_arrow.png);
+    top:82%;
+    left:20px;
+    z-index:800;
+    display:none;
+}
+.top-bar > .menu-1 > ul > li:hover ul {
+    display:block;
+}
+.top-bar .menu-1 > ul .cell-apps:hover::after {
+    display:block;
+} 
+.top-bar .menu-1  ul li .img-box {
+    width:18px;
+    height:18px;
+}
+
+.sect-service > .util li > a.like {
+    width: 44px;
+    height: 30px;
+    background-position: -85px -714px;
+}
+/* 탑바 CGV APPS */
+cgv {
+    color:#e71a0f;
+}
+.app-info {
+    position:absolute;
+    top:38px;
+    display:none;
+}
+.app-info .inner {
+    padding:26px 22px 0px;
+    width:196px;
+    border: 2px solid #4a3c31;
+    background: url(img/bg_app_down.png) no-repeat 50% 100% #fdfcf0;
+    z-index: 120;
+}
+
+.app-info .title {
+    padding-bottom: 12px;
+    color: #4a3c31;
+    font-size: 17px;
+    text-align: center;
+    font-weight: 700;
+    line-height: 22px;
+    border-bottom: 2px solid #4a3c31;
+}
+.app-info .choice-way {
+    padding-top: 1px;
+    height: 270px;
+    position: relative;
+}
+
+.app-info .choice-way .sms, .app-info .choice-way .qr {
+    width: 194px;
+    height: 270px;
+    text-align: center;
+    z-index: 2;
+}
+
+.app-info .choice-way .myapp {
+    padding: 10px 0;
+    text-align: left;
+}
+.app-info .choice-way .myapp span {
+    font-size:13px;
+}
+.app-info .choice-way .phone-title {
+    display: block;
+    margin: 2px 0 4px;
+    color: #4a3c31;
+    font-size:12px;
+    text-align:left;
+}
+
+
+
+.app-info .choice-way .qr .qr-image {
+    padding-top: 23px;
+}
+.app-info .ad-banner {
+    position: absolute;
+    left: -2px;
+    bottom: -5px;
+    z-index:-5;
+    cursor:pointer;
+}
+
+
+/* 로고바 */
+.logo-bar {
+    height:92px;
+    padding-top:28px;
+    font-family: 'NanumBarunGothic', '맑은 고딕', '돋움', Dotum, sans-serif;
+}
+.logo-bar .menu-1 > ul {
+    font-size:17px;
+    font-weight:bold;
+    margin-top:4px;
+}
+.logo-bar .logo {
+    padding-left:20px;
+    cursor:pointer;
+}
+.logo-bar .phototicket {
+    background-image:url(img/common_sprite_area_v4_2016.png);
+    width: 91px;
+    height: 86px;
+    background-position: -364px -305px;
+    z-index:;
+    top:-10px;
+}
+.logo-bar .payback {
+    position:absolute;
+    top:-14px;
+    left:740px;
+    cursor:pointer;
+}
+.logo-bar .menu-1 > ul > li {
+   padding:0 17px;
+}
+.logo-bar .search-box {
+    height:24px;
+    display:block;
+    margin-top:8px;
+}
+.logo-bar .search-box > input {
+    border:1px solid #b5b5b5;
+    width:105px;
+    height:23px;
+    padding:0 31px 0 5px;
+}
+.logo-bar .search-box > div {
+    cursor:pointer;
+    top:1px;
+    width:31px;
+    background-color:#e71a0f;
+    color: #fff;
+    font-family: 'NanumBarunGothicBold', '맑은 고딕', '돋움', Dotum, sans-serif;
+    font-size:11px;
+    line-height:24px;
+    text-align:center;
+}
+.logo-bar .menu-1 ul > li > div {
+    width:170px;
+    height:172px;
+    background-image:url(img/bg_smenu.png);
+    z-index:2;
+    display:none;
+    top:150%;
+    left:-50%;
+    position:absolute;
+}
+.logo-bar .menu-1 ul > li:nth-of-type(2) > div {
+    height:138px;
+}
+.logo-bar .menu-1 ul > li:nth-of-type(3) > div {
+    height:136px;
+}
+.logo-bar .menu-1 ul > li:nth-of-type(4) > div {
+    height:125px;
+}
+.logo-bar .menu-1 ul > li:last-child > div {
+    left:0;
+}
+.logo-bar .menu-1 ul ul {
+    position:absolute;
+    top:2px;
+    left:50%;
+    transform:translatex(-50%);
+    color:white;
+    z-index:2; 
+    text-align:left;
+    padding: 20px 15px;
+    border:2px solid #828282;
+}
+.logo-bar .menu-1 > ul > li > a {
+    display:block;
+    padding:0 10px;
+}
+.logo-bar .menu-1 ul ul::before {
+    content:"";
+    display:block;
+    position:absolute;
+    top:-20px;
+    height:30px;
+    width:100%;
+    left:0;
+}
+.logo-bar .menu-1 ul ul::after {
+    content:"";
+    background-image:url(img/ico_smenu_arrow.png);
+    left:0;
+    display:block;
+    position:absolute;
+    top:-12px;
+    left:50%;
+    width:19px;
+    height:10px;
+    margin-left:-8px;
+}
+.logo-bar .menu-1 ul ul a {
+    font-size:14px;
+    width:132px;
+    display:block;
+    position:relative;
+}
+
+.logo-bar .menu-1 ul > li:hover div {
+    display:block;
+}
+.logo-bar .menu-1 ul ul li:hover > a {
+    color:yellow;
+}
+.logo-bar .menu-1 ul ul li > a > img {
+    display:none;
+}
+.logo-bar .menu-1 ul ul li:hover > a > img {
+    display:block;
+}
+.logo-bar .menu-1 ul ul .last {
+    padding-top:10px;
+    border-top:2px solid #828282;
+}
+.logo-bar .menu-1 ul ul li:not(:first-child) {
+    margin-top:11px;
+}
+
+
+
+
+/* 슬라이드 */
+.carousel-1 .item {
+    height:450px;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+.carousel-1 .owl-nav {
+    margin:0 !important;
+}
+.carousel-1 .owl-nav > div {
+    padding:0 !important;
+    margin:0 20px !important;
+    border-radius:0 !important;
+    background-color:transparent !important;
+    position:absolute;
+    top:50%;
+    left:0;
+    transform:translateY(-50%);
+    font-size:4rem !important;
+}
+.carousel-1 .owl-nav > div.owl-next {
+    left:auto;
+    right:0;
+}
+.carousel-1 .owl-dots {
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+}
+.carousel-1 .owl-dots {
+    line-height:0 !important;
+    padding:10px 0 !important;
+}
+.carousel-1 .owl-dots > .owl-dot > span {
+    width:12px !important;
+    height:12px  !important;
+    border-radius:30px !important;
+    margin:0 3px !important;
+    background-color:grey !important;
+}
+.carousel-1 .owl-dots > .owl-dot.active > span {
+    background-color:#B40404 !important;
+}
+.carousel-1::before {
+    left:0;
+    background-image:url(img/bg_bricks_before.png)
+}
+.carousel-1::after {
+    right:0;
+    background-image:url(img/bg_bricks_after.png)
+}
+.carousel-1::after, .carousel-1::before {
+    position:absolute;
+    top:0;
+    z-index:10;
+    content:'';
+    width:14px;
+    height:450px;
+}
+.carousel-1 .owl-nav .owl-prev {
+    background-image:url(img/sprite_btn.png) !important;
+    background-position: 0 -97px !important;
+    width:26px !important;
+    height:52px !important;
+}
+.carousel-1 .owl-nav .owl-next {
+    background-position: -30px -97px !important;
+    background-image:url(img/sprite_btn.png) !important; 
+    width:26px !important;
+    height:52px !important;
+}
+
+
+/* 벽돌배경 */
+.bg-brick {
+    background-image:url(img/bg_c_bricks.png);
+    background-position:center;
+}
+
+
+/* 무비셀렉션바 */
+.movie-title {
+    margin-top:30px;
+    margin-bottom:15px;
+    position:relative;
+}
+
+.movie-title::before, .movie-title::after {
+    content:"";
+    display:block;
+    width:calc(50% - 22%);
+    height:6px;
+    border-top:1px solid black;
+    border-bottom:1px solid black;
+    position:absolute;
+    top:50%;
+    left:0;
+    transform:translatey(-50%);
+    z-index:-1;
+}
+
+.movie-title::after {
+    right:0;
+    left:auto;
+}
+
+.event-title::before, .event-title::after {
+    content:"";
+    display:block;
+    width:calc(50% - 9%);
+    height:6px;
+    border-top:1px solid black;
+    border-bottom:1px solid black;
+    position:absolute;
+    top:50%;
+    left:0;
+    transform:translatey(-50%);
+    z-index:-1;
+}
+
+.event-title::after {
+    left:auto;
+    right:0;
+}
+
+.movie-bar > div {
+    cursor:pointer;
+}
+.movie-bar .select-left {
+    width:733px;
+    height:388px;
+}
+.select-left img {
+    width:100%;
+}
+
+/* 이벤트바 */
+.event-title {
+    margin-top:30px;
+    margin-bottom:15px;
+    position:relative;
+}
+
+.event-bar > .menu-1 > li {
+    height:39px;
+    background-color:#e71a0f;
+}
+.event-bar > .menu-1 > li > a {
+    padding:0 15px;
+    line-height:39px;
+    display:block;
+    font-size:15px;
+    color:white;
+    position:relative;
+}
+.event-bar > .menu-1 > li:not(:nth-of-type(5)) > a::after {
+    content:"|";
+    position:absolute;
+    right:0;
+}
+.event-bar > .menu-2 {
+    margin-top:16px;
+}
+.event-bar > .menu-2 > li {
+    cursor:pointer;
+}
+.event-bar {
+    min-height:200px;
+    margin-bottom:30px;
+    padding-bottom:30px;
+    border-bottom:3px solid #241d1e;
+}
+.event-bar .menu-1 > li:last-child > a {
+    padding-right:19px;
+}
+.event-bar .menu-1 > .ribbon-left {
+    padding-left:19px;
+    background-image:url(img/sprite_corner.png);
+    background-position:0 -20px;
+    height:39px;
+}
+.event-bar .menu-2 > li:not(:first-child) {
+    margin-left:6.6px;
+}
+
+
+
+/* 노티스바 */
+.notice-bar {
+    margin-top: 10px;
+    border-bottom: 1px solid #222;
+    margin-bottom:50px;
+}
+.notice-bar .title {
+    height:35px;
+    color:#333;
+    font-size:15px;
+}
+.notice-bar > ul > li:first-child > a {
+    padding-top:3px;
+    padding-right:10px;
+    display:block;
+}
+.notice-bar > ul > li:last-child > a {
+    display:block;
+    padding:5px 10px 0 0;
+}
+.notice-bar .info {
+    width:880px;
+    font-size:12px;
+    color:#222;
+}
+
+
+/* 카드광고바 */
+.card-ad-bar > ul {
+    cursor:pointer;
+}
+.card-ad-bar .bg-color {
+    height:182.2px;
+    background-color:#f8d5db;
+    position:absolute;
+    width:100%;
+    bottom:0;
+    z-index:-1;
+}
+
+
+
+/* 폴리시 */
+.policy-bar {
+    padding-top:28px;
+    height:88px;
+}
+
+.policy-bar .info li > a {
+    padding:0 10px;
+    font-size:13.5px;
+    color:#444444;
+    letter-spacing:-1px;
+    display:block;
+}
+.policy-bar > ul:first-child {
+    margin-left:-10px;
+    margin-right:-10px;
+}
+.policy-bar > ul {
+    padding-top:20px;
+}
+.policy-bar .address {
+    padding-left:100px;
+    font-size:12px;
+    color:#555555;
+}
+.policy-bar .address > ul:not(:first-child) li {
+    position:relative;
+}
+.policy-bar .address li:not(:last-child) {
+    padding-right:10px;
+}
+.policy-bar .address li:not(:first-child) {
+    padding-left:5px;
+}
+.policy-bar .address li:not(:last-child)::after {
+    content:"|";
+    position:absolute;
+    top:0;
+    right:0;
+}
+.policy-bar .cell-right > a {
+    background-image:url(img/common_sprite_area_v4_2016.png);
+    width:34px;
+    height:34px;
+    display:block;
+}
+.policy-bar .cell-right .facebook {
+     background-position:-509px -429px;
+}
+.policy-bar .cell-right .twitter {
+    background-position:-551px -429px;
+    margin-left:2px;
+}
+.policy-bar .cell-right .instagram {
+    background-position:-593px -429px;
+    margin-left:2px;
+}
+.policy-bar .cell-right > select {
+    width:140px;
+    height:29px;
+    border:1px solid gray;
+    margin-left:5px;
+    margin-top:2px;
+    background:transparent;
+}
+.policy-bar .cell-right > select > option {
+    display:block;
+    padding:4px 8px;
+    font-size:12;
+}
+.policy-bar .cell-right button {
+    width:29px;
+    height:29px;
+    margin-top:2px;
+    margin-left:5px;
+    text-align:center;
+    background-color:gray;
+    color:white;
+    font-size:11px;
+}
+.policy-bar .info > li:not(:last-child) > a::after {
+    content:"|";
+    position:absolute;
+    top:1px;
+    left:100%;
+    font-size:10px;
+}
+.policy-bar .info > li > a {
+    position:relative;
+    color:black;
+}
+.policy-bar .logo {
+    position:absolute;
+    top:90px;
+    width:90px;
+    height:43px;
+    background-position:-145px -319px;
+    background-image: url(img/common_sprite_area_v4_2016.png);
+}
+
+
+/* 사이드 바 */
+.right-side-bar {
+    width:116px;
+    height:570px;
+    background-color:#fefcef;
+    border:3px solid #DF0101;
+    border-radius:8px;
+    position:absolute;
+    top:159px;
+    left:50%;
+    margin-left:510px;
+    z-index: 150;
+}
+.right-side-bar img {
+    vertical-align:middle;
+    cursor:pointer;
+}
+.right-side-bar > ul {
+    padding-left:7px;
+    padding-top:7px;
+}
+.right-side-bar a {
+    position:absolute;
+    top:calc(100% + 3px);
+}
+
+/* 푸터배너 */
+.footer-banner {
+    height:66px;
+    border-top:1px solid #949494;
+    border-bottom:1px solid #949494;
+}
+.footer-banner > ul > li {
+    padding:10px 0;
+}
+.footer-banner > ul > li:not(:first-child) {
+    margin-left:22px;
+}
+.footer-banner a {
+    background-image:url(img/common_sprite_area_v4_2016.png);
+    height:44px;
+    display:block;
+}
+.footer-banner .dx {
+    width:49px;
+    background-position:0 -768px;
+}
+.footer-banner .imax {
+    width:59px;
+    background-position:-74px -768px;
+}
+.footer-banner .screenx {
+    width:88px;
+    background-position:-159px -768px;
+}
+.footer-banner .spherex {
+    width:76px;
+    background-position:-273px -768px;
+}
+.footer-banner .tempur {
+    width:55px;
+    background-position:-480px -768px;
+}
+.footer-banner .gold {
+    width:84px;
+    background-position:-567px -768px;
+}
+.footer-banner .cine {
+    width:89px;
+    background-position:-679px -768px;
+}
+.footer-banner .cinema {
+    width:86px;
+    background-position:0 -826px;
+}
+.footer-banner .kids {
+    width:70px;
+    background-position:-113px -826px;
+}
+.footer-banner .cinenforet {
+    width:120px;
+    background-position:-207px -826px;
+}
+
+/* 바텀배터 */
+.bottom-banner .box-wrap {
+    width:228px;
+    height:261px;
+    padding:3px;
+    border:3px solid #241d1e;
+}
+.bottom-banner img {
+    cursor:pointer;
+}
+.bottom-banner .box-wrap .box-inner {
+    width:226px;
+    height:259px;
+    border:1px solid #241d1e;
+    text-align:center;
+}
+.bottom-banner ul:nth-of-type(2) {
+    margin:0 7px;
+}
+
+
+/* 하단 배경 */
+.bottom-bg {
+    background-image:url(img/bg_footer_com.gif);
+    margin-top:10px;
+    background-position:center;
+}
+.bottom-bg > span {
+    height:281px;
+    width:100%;
+    display:block;
+}
+
+@media ( max-width: 980px ) {
+    .right-side-bar {
+        display:none;
+    }
+}
